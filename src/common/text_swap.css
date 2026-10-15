@@ -1,0 +1,39 @@
+.swap {
+  position: relative;
+  display: block;
+  width: fit-content;
+}
+
+.swap__ghost { visibility: hidden; }
+
+.swap__face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+              color 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+
+.swap__face--out { color: var(--text-secondary); }
+
+.swap__face--in {
+  transform-origin: bottom;
+  transform: scaleY(0);
+  color: var(--green-primary);
+  pointer-events: none;
+}
+
+.swap-host:hover .swap__face--out,
+.swap-host:focus-visible .swap__face--out,
+.swap-host--on .swap__face--out { transform: scaleY(0); }
+
+.swap-host:hover .swap__face--in,
+.swap-host:focus-visible .swap__face--in,
+.swap-host--on .swap__face--in { transform: scaleY(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .swap__face { transition-duration: 0.01ms; }
+}
