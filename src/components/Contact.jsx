@@ -29,16 +29,13 @@ export default function Contact({ onOpenResume }) {
 
   // Formatted body generator for Email
   const formatEmailBody = (data) => {
-    const name = data.name.trim() || 'Portfolio Visitor';
-    const email = data.email.trim() || 'Not specified';
-    const subject = data.subject.trim();
+    const name = data.name.trim();
     const msg = data.message.trim() || '';
 
-    let body = `Hello Rucchika,\n\nI am reaching out through your portfolio contact form:\n\n• Name: ${name}\n• Email: ${email}`;
-    if (subject) {
-      body += `\n• Subject: ${subject}`;
+    let body = `Hello Rucchika,\n\n${msg}`;
+    if (name) {
+      body += `\n\nBest regards,\n${name}`;
     }
-    body += `\n\n• Message:\n${msg}\n\nBest regards,\n${name}`;
     return body;
   };
 
