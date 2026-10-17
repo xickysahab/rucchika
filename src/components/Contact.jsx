@@ -18,27 +18,38 @@ export default function Contact({ onOpenResume }) {
   // Formatted message text generator for WhatsApp
   const formatWhatsAppMessage = (data) => {
     const name = data.name.trim() || 'Visitor';
-    const email = data.email.trim() || 'Not specified';
-    const topic = data.subject.trim() || 'General Opportunity / Platform Engineering';
-    const msg = data.message.trim() || 'Hi Rucchika, I came across your portfolio and would like to connect.';
+    const email = data.email.trim();
+    const subject = data.subject.trim();
+    const msg = data.message.trim() || '';
 
-    return `Hi Rucchika,\n\nI am reaching out via your portfolio:\n\n*Name:* ${name}\n*Email:* ${email}\n*Topic / Opportunity:* ${topic}\n\n*Message:*\n${msg}`;
+    let text = `Hi Rucchika,\n\nI am reaching out via your portfolio:\n\n*Name:* ${name}`;
+    if (email) text += `\n*Email:* ${email}`;
+    if (subject) text += `\n*Subject:* ${subject}`;
+    text += `\n\n*Message:*\n${msg}`;
+    return text;
   };
 
   // Formatted body generator for Email
   const formatEmailBody = (data) => {
     const name = data.name.trim() || 'Portfolio Visitor';
     const email = data.email.trim() || 'Not specified';
-    const topic = data.subject.trim() || 'General Opportunity / Platform Engineering';
+    const subject = data.subject.trim();
     const msg = data.message.trim() || '';
 
-    return `Hello Rucchika,\n\nI am reaching out through your portfolio contact form with an inquiry:\n\n• Name: ${name}\n• Email: ${email}\n• Topic / Opportunity: ${topic}\n\n• Message:\n${msg}\n\nBest regards,\n${name}`;
+    let body = `Hello Rucchika,\n\nI am reaching out through your portfolio contact form:\n\n• Name: ${name}\n• Email: ${email}`;
+    if (subject) {
+      body += `\n• Subject: ${subject}`;
+    }
+    body += `\n\n• Message:\n${msg}\n\nBest regards,\n${name}`;
+    return body;
   };
 
   const getEmailSubject = (data) => {
-    const name = data.name.trim() || 'Portfolio Visitor';
-    const topic = data.subject.trim();
-    return topic ? `[Opportunity] ${topic} — ${name}` : `Portfolio Inquiry from ${name}`;
+    const subject = data.subject?.trim();
+    // Return EXACTLY what user wrote in the field
+    if (subject) return subject;
+    const name = data.name?.trim();
+    return name ? `Inquiry from ${name}` : 'Portfolio Inquiry';
   };
 
   const getWhatsAppUrl = (data = formData) => {
@@ -278,10 +289,12 @@ export default function Contact({ onOpenResume }) {
                     <span className="contact-preview-label">Sender</span>
                     <span className="contact-preview-val">{formData.name} &lt;{formData.email || 'Email not provided'}&gt;</span>
                   </div>
-                  <div className="contact-preview-row">
-                    <span className="contact-preview-label">Topic</span>
-                    <span className="contact-preview-val">{formData.subject || 'General Opportunity / Platform Inquiry'}</span>
-                  </div>
+                  {formData.subject && (
+                    <div className="contact-preview-row">
+                      <span className="contact-preview-label">Subject</span>
+                      <span className="contact-preview-val">{formData.subject}</span>
+                    </div>
+                  )}
                   <div className="contact-preview-row">
                     <span className="contact-preview-label">Message</span>
                     <span className="contact-preview-val" style={{ whiteSpace: 'pre-wrap' }}>{formData.message}</span>
@@ -373,12 +386,12 @@ export default function Contact({ onOpenResume }) {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label" htmlFor="contact-subject">Topic / Opportunity</label>
+                  <label className="form-label" htmlFor="contact-subject">Subject</label>
                   <input
                     type="text"
                     id="contact-subject"
                     className="form-input"
-                    placeholder="e.g. Contractual AI Platform Consulting / Lead Platform Role"
+                    placeholder="e.g. Project Inquiry / Discussion"
                     value={formData.subject}
                     onChange={(e) => handleFieldChange('subject', e.target.value)}
                   />
