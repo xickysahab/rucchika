@@ -16,7 +16,7 @@ export const portfolioData = {
     github: "https://github.com/Rucchika/My_Project",
     githubProfile: "https://github.com/Rucchika",
     linkedin: "https://www.linkedin.com/in/rucchika-bhatia/",
-    whatsapp: "https://wa.me/918319295211",
+    whatsapp: "https://api.whatsapp.com/send?phone=918319295211&text=Hi%20Rucchika,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20opportunity!",
     whatsappUsername: "@_Rucchika",
     medium: "https://medium.com/@rucchikabhatia",
     phone: "+91-8319295211",
