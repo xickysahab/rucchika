@@ -131,7 +131,7 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
                 style={{ width: '100%', justifyContent: 'center' }}
               >
                 <FileText size={15} />
-                <span>View Executive Resume (PDF)</span>
+                <span>View Resume (PDF)</span>
               </button>
             </div>
           </div>

@@ -183,7 +183,7 @@ export default function Contact({ onOpenResume }) {
                   </div>
                   <div>
                     <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Resume / Credentials</div>
-                    <span style={{ color: 'var(--green-primary)', fontWeight: 600 }}>View Executive Resume (PDF)</span>
+                    <span style={{ color: 'var(--green-primary)', fontWeight: 600 }}>View Resume (PDF)</span>
                   </div>
                 </div>
               </div>

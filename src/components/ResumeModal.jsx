@@ -32,7 +32,7 @@ export default function ResumeModal({ isOpen, onClose }) {
         <div className="resume-control-bar no-print">
           <div className="resume-control-title">
             <span className="brand-status-dot"></span>
-            <strong className="resume-header-desktop">Executive Resume / CV</strong>
+            <strong className="resume-header-desktop">Resume / CV</strong>
             <strong className="resume-header-mobile">Resume / CV</strong>
             <span className="resume-badge-tag">Verified Data</span>
           </div>
