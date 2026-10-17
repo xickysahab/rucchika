@@ -4,10 +4,11 @@
   gap: 12px;
   white-space: nowrap;
   margin-bottom: 12px;
+  max-width: 100%;
 }
 
 .eyebrow__rule {
-  width: 2.25rem;
+  width: 2rem;
   height: 1.5px;
   flex-shrink: 0;
   background: var(--green-primary);
@@ -17,8 +18,10 @@
   font-family: var(--font-editor, 'Instrument Serif', Georgia, serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 1.2;
   color: var(--green-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

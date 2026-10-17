@@ -19,11 +19,12 @@ export default function Hero({ onOpenResume }) {
       <div className="container">
         <div className="hero-grid-layout">
           <div className="hero-content">
-            <Eyebrow>Leadership & Multi-Cloud Architecture</Eyebrow>
-
-            <div className="hero-status-pill">
-              <span className="brand-status-dot"></span>
-              <span>{personal.targetRole}</span>
+            <div className="hero-eyebrow-row">
+              <Eyebrow className="hero-eyebrow">Leadership & Multi-Cloud Architecture</Eyebrow>
+              <div className="hero-status-pill">
+                <span className="brand-status-dot"></span>
+                <span>{personal.targetRole}</span>
+              </div>
             </div>
 
             <RevealText
@@ -138,7 +139,7 @@ export default function Hero({ onOpenResume }) {
                     title="WhatsApp: +91 83192 95211"
                   >
                     <WhatsappIcon size={15} />
-                    <span>{personal.whatsappUsername || "@_Rucchika"}</span>
+                    <span>WhatsApp</span>
                   </a>
                 </Magnetic>
               </div>
@@ -157,7 +158,7 @@ export default function Hero({ onOpenResume }) {
           </div>
 
           <div className="stat-item">
-            <span className="stat-value">
+            <span className="stat-value stat-value--text">
               AWS • Azure • GCP
             </span>
             <span className="stat-label">Multi-Cloud</span>

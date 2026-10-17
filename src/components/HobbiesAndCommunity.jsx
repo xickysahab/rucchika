@@ -87,8 +87,8 @@ export default function HobbiesAndCommunity() {
         </motion.div>
 
         {/* Section 2: Hobbies & Beyond Engineering */}
-        <div style={{ marginTop: '96px' }}>
-          <div className="section-header" style={{ marginBottom: '48px' }}>
+        <div className="hobbies-sub-section">
+          <div className="section-header">
             <Eyebrow>Life Beyond Engineering</Eyebrow>
             <RevealText
               as="h2"
