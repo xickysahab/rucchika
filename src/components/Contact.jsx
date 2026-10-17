@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { Mail, Send, CheckCircle2, FileText, MapPin, MessageSquare, ArrowUpRight, ExternalLink, AlertCircle } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, WhatsappIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon, MediumIcon } from './SocialIcons';
 import Eyebrow from '../common/eyebrow';
 import RevealText from '../common/reveal_text';
 import Magnetic from '../common/magnetic';
@@ -189,16 +189,16 @@ export default function Contact({ onOpenResume }) {
               </div>
             </div>
 
-            <div className="contact-social-buttons" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+            <div className="contact-social-buttons" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px' }}>
               <Magnetic strength={0.2} className="w-full">
                 <a 
                   href={personal.githubProfile || personal.github} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn-outline"
-                  style={{ width: '100%', padding: '10px 8px', fontSize: '0.75rem', justifyContent: 'center' }}
+                  style={{ width: '100%', padding: '10px 6px', fontSize: '0.75rem', justifyContent: 'center' }}
                 >
-                  <GithubIcon size={16} />
+                  <GithubIcon size={15} />
                   <span>GitHub</span>
                 </a>
               </Magnetic>
@@ -209,9 +209,9 @@ export default function Contact({ onOpenResume }) {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn-outline"
-                  style={{ width: '100%', padding: '10px 8px', fontSize: '0.75rem', justifyContent: 'center' }}
+                  style={{ width: '100%', padding: '10px 6px', fontSize: '0.75rem', justifyContent: 'center' }}
                 >
-                  <LinkedinIcon size={16} />
+                  <LinkedinIcon size={15} />
                   <span>LinkedIn</span>
                 </a>
               </Magnetic>
@@ -222,10 +222,23 @@ export default function Contact({ onOpenResume }) {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn-outline"
-                  style={{ width: '100%', padding: '10px 8px', fontSize: '0.75rem', justifyContent: 'center', borderColor: 'rgba(37, 211, 102, 0.4)' }}
+                  style={{ width: '100%', padding: '10px 6px', fontSize: '0.75rem', justifyContent: 'center', borderColor: 'rgba(37, 211, 102, 0.4)' }}
                 >
-                  <WhatsappIcon size={16} />
+                  <WhatsappIcon size={15} />
                   <span>WhatsApp</span>
+                </a>
+              </Magnetic>
+
+              <Magnetic strength={0.2} className="w-full">
+                <a 
+                  href={personal.medium || "https://medium.com/@rucchikabhatia"} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-outline"
+                  style={{ width: '100%', padding: '10px 6px', fontSize: '0.75rem', justifyContent: 'center' }}
+                >
+                  <MediumIcon size={15} />
+                  <span>Medium</span>
                 </a>
               </Magnetic>
             </div>

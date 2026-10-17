@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Sparkles, Layers, GitBranch, ArrowUpRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, WhatsappIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon, MediumIcon } from './SocialIcons';
 import RevealText from '../common/reveal_text';
 import Eyebrow from '../common/eyebrow';
 import Magnetic from '../common/magnetic';
@@ -141,6 +141,19 @@ export default function Hero({ onOpenResume }) {
                   >
                     <WhatsappIcon size={15} />
                     <span>WhatsApp</span>
+                  </a>
+                </Magnetic>
+
+                <Magnetic strength={0.3} className="profile-social-item">
+                  <a 
+                    href={personal.medium || "https://medium.com/@rucchikabhatia"} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="profile-social-link"
+                    title="Medium Blog: @rucchikabhatia"
+                  >
+                    <MediumIcon size={15} />
+                    <span>Medium</span>
                   </a>
                 </Magnetic>
               </div>

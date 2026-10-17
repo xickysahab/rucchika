@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, WhatsappIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon, MediumIcon } from './SocialIcons';
 import Magnetic from '../common/magnetic';
 
 export default function Footer() {
@@ -65,6 +65,11 @@ export default function Footer() {
             <Magnetic strength={0.25}>
               <a href={personal.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-icon" aria-label="WhatsApp" title="Chat on WhatsApp (+91 83192 95211)" style={{ width: '38px', height: '38px' }}>
                 <WhatsappIcon size={15} />
+              </a>
+            </Magnetic>
+            <Magnetic strength={0.25}>
+              <a href={personal.medium || "https://medium.com/@rucchikabhatia"} target="_blank" rel="noopener noreferrer" className="btn-icon" aria-label="Medium" title="Read on Medium (@rucchikabhatia)" style={{ width: '38px', height: '38px' }}>
+                <MediumIcon size={15} />
               </a>
             </Magnetic>
             <Magnetic strength={0.25}>

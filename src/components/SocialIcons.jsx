@@ -55,3 +55,21 @@ export function WhatsappIcon({ size = 18, color = 'currentColor', ...props }) {
     </svg>
   );
 }
+
+export function MediumIcon({ size = 18, color = 'currentColor', ...props }) {
+  return (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width={size} 
+      height={size} 
+      viewBox="0 0 24 24" 
+      fill="currentColor"
+      {...props}
+    >
+      <circle cx="6.5" cy="12" r="4.5" />
+      <ellipse cx="14.5" cy="12" rx="2.5" ry="4.3" />
+      <ellipse cx="19.5" cy="12" rx="0.9" ry="4" />
+    </svg>
+  );
+}
+
