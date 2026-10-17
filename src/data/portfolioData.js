@@ -90,7 +90,7 @@ export const portfolioData = {
     },
     {
       title: "DevOps & Automation",
-      desc: "Zero-touch CI/CD pipelines, container orchestration with Kubernetes, Helm, and GitOps workflows via ArgoCD.",
+      desc: "Zero-touch CI/CD pipelines, container orchestration with Kubernetes & Docker, Helm, and GitOps workflows via ArgoCD.",
       badge: "GitOps & CI/CD"
     },
     {

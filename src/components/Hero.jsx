@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, Sparkles, Layers, GitBranch, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, Download, Sparkles, Layers, GitBranch, ArrowUpRight, Box, Boxes } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon, WhatsappIcon, MediumIcon } from './SocialIcons';
 import RevealText from '../common/reveal_text';
@@ -12,7 +12,7 @@ export default function Hero({ onOpenResume }) {
   const { personal } = portfolioData;
 
   const badges = [
-    "AWS", "Azure", "GCP", "Kubernetes", "Terraform", "GraphTalk", "GenAI & MLOps"
+    "AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform", "GraphTalk", "GenAI & MLOps"
   ];
 
   return (
@@ -48,8 +48,9 @@ export default function Hero({ onOpenResume }) {
                 <Magnetic key={idx} strength={0.2}>
                   <span className={`badge-item ${idx < 3 ? 'active' : ''}`}>
                     {idx === 0 && <Layers size={13} color="var(--green-primary)" />}
-                    {idx === 3 && <GitBranch size={13} color="var(--green-primary)" />}
-                    {idx === 5 && <Sparkles size={13} color="var(--green-primary)" />}
+                    {b === "Kubernetes" && <Boxes size={13} color="var(--green-primary)" />}
+                    {b === "Docker" && <Box size={13} color="var(--green-primary)" />}
+                    {b === "GraphTalk" && <Sparkles size={13} color="var(--green-primary)" />}
                     <span>{b}</span>
                   </span>
                 </Magnetic>

@@ -136,26 +136,18 @@ export default function TechStack() {
         <div className="tech-grid">
           {filteredTech.map((item, idx) => (
             <div key={idx} className="tech-card">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{ 
-                  width: '38px', 
-                  height: '38px', 
-                  borderRadius: 'var(--radius-md)', 
-                  background: 'var(--green-soft)', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center' 
-                }}>
+              <div className="tech-card-header">
+                <div className="tech-icon-box">
                   {renderIcon(item.icon)}
                 </div>
-                <div className="tech-info">
-                  <span className="tech-name">{item.name}</span>
-                  <span className="tech-cat">{item.category}</span>
-                </div>
+                <span className={`tech-badge ${getBadgeClass(item.level)}`}>
+                  {item.level === 'Professional Experience' ? 'Production' : item.level === 'Hands-on Projects' ? 'Implemented' : 'Research'}
+                </span>
               </div>
-              <span className={`tech-level-badge ${getBadgeClass(item.level)}`}>
-                {item.level === 'Professional Experience' ? 'Production' : item.level === 'Hands-on Projects' ? 'Implemented' : 'Research'}
-              </span>
+              <div className="tech-info">
+                <h3 className="tech-name">{item.name}</h3>
+                <span className="tech-cat">{item.category}</span>
+              </div>
             </div>
           ))}
         </div>
