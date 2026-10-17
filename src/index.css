@@ -1116,16 +1116,26 @@ img { display: block; max-width: 100%; }
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-2xl);
-  padding: 32px 36px;
+  padding: 24px 28px;
   box-shadow: var(--shadow-md);
-  margin-top: 32px;
+  margin-top: 28px;
+}
+
+.niche-expertise-banner .plogo__mark {
+  opacity: 0.45;
+  color: var(--text-muted);
+}
+
+.niche-expertise-banner:hover .plogo__mark {
+  opacity: 0.9;
+  color: var(--green-primary);
 }
 
 .niche-badge-strip {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
@@ -1152,29 +1162,31 @@ img { display: block; max-width: 100%; }
 .niche-content-grid {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
-  gap: 32px;
+  gap: 28px;
   align-items: center;
 }
 
 @media (max-width: 900px) {
   .niche-content-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
 }
 
 .niche-product-title {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--text-headline);
   letter-spacing: -0.02em;
-  margin-bottom: 8px;
+  line-height: 1.25;
+  margin-bottom: 6px;
 }
 
 .niche-product-desc {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .niche-pills-wrap {
@@ -1187,7 +1199,7 @@ img { display: block; max-width: 100%; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 14px;
+  padding: 6px 12px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
@@ -1201,6 +1213,11 @@ img { display: block; max-width: 100%; }
   background: var(--green-soft);
   border-color: var(--green-border);
   color: var(--green-primary);
+}
+
+/* Optimized bottom padding for Expertise page before footer */
+#expertise.section {
+  padding-bottom: 52px;
 }
 
 /* ══════════════════════════════════
@@ -2636,6 +2653,10 @@ img { display: block; max-width: 100%; }
   .niche-expertise-banner {
     padding: 18px 14px;
     border-radius: var(--radius-lg);
+    margin-top: 20px;
+  }
+  #expertise.section {
+    padding-bottom: 36px;
   }
   .niche-product-title {
     font-size: 1.125rem;
