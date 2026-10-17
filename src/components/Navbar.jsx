@@ -16,11 +16,12 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
     { num: '01', label: 'About', href: '#about' },
     { num: '02', label: 'Expertise', href: '#expertise' },
     { num: '03', label: 'Projects', href: '#projects' },
-    { num: '04', label: 'Stack', href: '#stack' },
-    { num: '05', label: 'Experience', href: '#experience' },
-    { num: '06', label: 'Blog', href: '#blog' },
-    { num: '07', label: 'Community', href: '#community' },
-    { num: '08', label: 'Contact', href: '#contact' },
+    { num: '04', label: 'Tech Stack', href: '#stack' },
+    { num: '05', label: 'Certifications', href: '#certifications' },
+    { num: '06', label: 'Experience', href: '#experience' },
+    { num: '07', label: 'Blog', href: '#blog' },
+    { num: '08', label: 'Community', href: '#community' },
+    { num: '09', label: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -44,7 +45,7 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
                 whiteSpace: 'nowrap'
               }}>
                 <span className="brand-status-dot"></span>
-                <span>Cloud & AI Platform Lead</span>
+                <span>AI Platform Engineer</span>
               </div>
             </div>
           </a>

@@ -38,14 +38,16 @@ export default function Footer() {
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '24px', fontSize: '0.8125rem', color: 'var(--text-secondary)' }} className="footer-nav-links">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', fontSize: '0.8125rem', color: 'var(--text-secondary)' }} className="footer-nav-links">
             <a href="#about" className="nav-link">About</a>
             <a href="#expertise" className="nav-link">Expertise</a>
             <a href="#projects" className="nav-link">Projects</a>
-            <a href="#stack" className="nav-link">Stack</a>
+            <a href="#stack" className="nav-link">Tech Stack</a>
+            <a href="#certifications" className="nav-link">Certifications</a>
             <a href="#experience" className="nav-link">Experience</a>
             <a href="#blog" className="nav-link">Blog</a>
             <a href="#community" className="nav-link">Community</a>
+            <a href="#contact" className="nav-link">Contact</a>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>

@@ -41,7 +41,17 @@ export default function BlogModal({ post, onClose }) {
           {post.content}
         </div>
 
-        <div style={{ marginTop: '36px', borderTop: '1px solid var(--border-light)', paddingTop: '20px', display: 'flex', justifyContent: 'flex-end' }}>
+        <div style={{ marginTop: '36px', borderTop: '1px solid var(--border-light)', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+          <a 
+            href={post.mediumUrl || "https://medium.com/@rucchikabhatia"} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-outline"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>Read on Medium</span>
+            <ArrowRight size={14} />
+          </a>
           <button className="btn btn-primary" onClick={onClose}>
             <span>Close Article</span>
           </button>

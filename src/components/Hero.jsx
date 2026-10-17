@@ -88,7 +88,7 @@ export default function Hero({ onOpenResume }) {
               />
               <div className="profile-status-badge">
                 <span className="brand-status-dot"></span>
-                <span>Open to Roles</span>
+                <span>Open to Roles & Consulting</span>
               </div>
             </div>
 

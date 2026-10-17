@@ -11,27 +11,28 @@ export const portfolioData = {
     positioning: "AI Platform Engineer • Cloud & Data Engineering • MLOps & AIOps • GraphTalk Platform",
     brandPromise: "Building intelligent, secure, and repeatable cloud & AI platforms through IaC and automation.",
     location: "Global / Remote",
-    status: "Available for AI Platform & Cloud Engineering Leadership",
+    status: "Available for Leadership & Contractual DevOps/AI Consulting",
     email: "rucchikabhatia@gmail.com",
     github: "https://github.com/Rucchika/My_Project",
     githubProfile: "https://github.com/Rucchika",
     linkedin: "https://www.linkedin.com/in/rucchika-bhatia/",
     whatsapp: "https://wa.me/918319295211",
     whatsappUsername: "@_Rucchika",
+    medium: "https://medium.com/@rucchikabhatia",
     phone: "+91-8319295211",
     avatar: "/images/profile.png",
-    banner: "/images/devops-ai-banner-green.png",
+    banner: "/images/ai-platform-engineer-banner.jpg",
     resumeUrl: "#",
     hobbies: [
-      { name: "Hiking", desc: "Exploring scenic mountain trails and elevation tracks across wilderness summits.", image: "/images/hiking.png", tag: "Outdoor & Fitness" },
+      { name: "Cooking", desc: "Crafting wholesome culinary creations, experimenting with rich spices, herbs, and vibrant flavor profiles.", image: "/images/cooking.jpg", tag: "Culinary Art" },
+      { name: "Meditation & Mindfulness", desc: "Cultivating stillness, mental clarity, and reflective awareness to fuel sustained focus and high-stakes problem solving.", image: "/images/meditation.jpg", tag: "Mindfulness & Zen" },
       { name: "Reading", desc: "Deep diving into systems engineering, distributed architecture, and self-evolution literature.", image: "/images/reading.png", tag: "Continuous Learning" },
-      { name: "Adventure", desc: "Exploring untamed wildlife, natural sanctuaries, and thrill sports across diverse destinations.", image: "/images/adventure.jpg", tag: "Exploration" },
-      { name: "Cooking", desc: "Crafting wholesome culinary creations, experimenting with diverse spices, and flavor profiles.", image: "/images/cooking.jpg", tag: "Culinary Art" }
+      { name: "Adventure", desc: "Exploring untamed wildlife, natural sanctuaries, and thrill sports across diverse destinations.", image: "/images/adventure.jpg", tag: "Exploration" }
     ],
     extraCurricular: [
-      { title: "Teaching", role: "Technical Educator", desc: "Conducting hands-on workshops on Linux fundamentals, Docker containerization, and AWS cloud architecture.", icon: "GraduationCap" },
-      { title: "Mentoring", role: "Engineering Mentor", desc: "Guiding aspiring cloud engineers and junior DevOps practitioners on real-world infrastructure practices.", icon: "Users" },
-      { title: "Career Counselling", role: "Tech Career Advisor", desc: "Helping professionals transition into DevOps, SRE, and AI platform engineering with tailored roadmaps.", icon: "Compass" }
+      { title: "Teaching", role: "Technical Educator", desc: "Conducting hands-on workshops on Linux fundamentals, Docker containerization, Kubernetes, and multi-cloud architecture.", icon: "GraduationCap" },
+      { title: "Mentoring", role: "Engineering Mentor", desc: "Guiding aspiring cloud engineers, junior DevOps practitioners, and platform leads with actionable 1:1 career roadmaps.", icon: "Users" },
+      { title: "DevOps & AI Platform Consulting", role: "Contractual Consultant", desc: "Available for contractual advisory and platform architecture: multi-cloud infrastructure automation, Kubernetes production hardening, and GenAI/MLOps platform delivery.", icon: "Briefcase" }
     ],
     stats: [
       { label: "Experience", value: "8+ Years", desc: "Multi-Cloud & AI Platforms" },
@@ -494,11 +495,56 @@ export const portfolioData = {
   ],
 
   certifications: [
-    { name: "GitHub Copilot", issuer: "Microsoft", date: "June 2026" },
-    { name: "AWS Cloud Practitioner", issuer: "Amazon Web Services", date: "October 2023" },
-    { name: "Oracle Cloud Infrastructure Foundation Associate", issuer: "Oracle", date: "February 2022" },
-    { name: "Database Administrator", issuer: "DXC Technology", date: "February 2021 – June 2021" },
-    { name: "Python Data Structure", issuer: "Cisco", date: "October 2020" }
+    { 
+      id: "cert-1",
+      name: "GitHub Copilot", 
+      issuer: "Microsoft", 
+      date: "June 2026",
+      category: "AI & Developer Productivity",
+      status: "Active Credential",
+      badge: "Microsoft Certified",
+      credentialUrl: "https://learn.microsoft.com/en-us/users/rucchikabhatia/"
+    },
+    { 
+      id: "cert-2",
+      name: "AWS Cloud Practitioner", 
+      issuer: "Amazon Web Services", 
+      date: "October 2023",
+      category: "Cloud Infrastructure",
+      status: "Active Credential",
+      badge: "AWS Certified",
+      credentialUrl: "https://aws.amazon.com/verification"
+    },
+    { 
+      id: "cert-3",
+      name: "Oracle Cloud Infrastructure Foundation Associate", 
+      issuer: "Oracle", 
+      date: "February 2022",
+      category: "Multi-Cloud Platforms",
+      status: "Verified",
+      badge: "OCI Certified",
+      credentialUrl: "https://catalog-education.oracle.com"
+    },
+    { 
+      id: "cert-4",
+      name: "Database Administrator", 
+      issuer: "DXC Technology", 
+      date: "February 2021 – June 2021",
+      category: "Database Systems",
+      status: "Enterprise Verified",
+      badge: "DXC Professional",
+      credentialUrl: "#"
+    },
+    { 
+      id: "cert-5",
+      name: "Python Data Structure", 
+      issuer: "Cisco", 
+      date: "October 2020",
+      category: "Algorithms & Programming",
+      status: "Verified",
+      badge: "Cisco Certified",
+      credentialUrl: "#"
+    }
   ],
 
   technicalSkillsCategories: [
@@ -524,6 +570,7 @@ export const portfolioData = {
       category: "Cloud Architecture",
       readTime: "7 min read",
       date: "Oct 2026",
+      mediumUrl: "https://medium.com/@rucchikabhatia",
       excerpt: "A deep architectural breakdown of active-active and active-passive multi-region topologies, Route 53 latency routing, DynamoDB global tables, and RPO/RTO mitigation strategies.",
       content: `## Architecture Strategy for Mission-Critical Resiliency
 Building multi-region applications isn't merely about deploying copies of your services; it requires a rigorous synchronization and failover strategy.
@@ -548,6 +595,7 @@ Keep stateless layers identical via Terraform, and test simulated failover exerc
       category: "DevOps & Platform",
       readTime: "6 min read",
       date: "Sep 2026",
+      mediumUrl: "https://medium.com/@rucchikabhatia",
       excerpt: "How to decouple cloud infrastructure provisioning from application deployment lifecycles using Terraform for the base layer and ArgoCD for application workloads.",
       content: `## Bridging the Gap Between IaC and Workload Delivery
 A common anti-pattern in platform engineering is trying to manage both Kubernetes pods and cloud IAM roles in the exact same Terraform workspace.
@@ -567,6 +615,7 @@ A common anti-pattern in platform engineering is trying to manage both Kubernete
       category: "AI Engineering",
       readTime: "8 min read",
       date: "Aug 2026",
+      mediumUrl: "https://medium.com/@rucchikabhatia",
       excerpt: "Practical lessons learned moving from a naive LangChain prototype to an enterprise-grade Retrieval-Augmented Generation system with sub-200ms latency.",
       content: `## Why Naive RAG Fails in Production
 Most demo tutorials split documents into 500-token chunks and do simple cosine similarity search. In production, this fails when documents contain tables, code blocks, or ambiguous pronouns.
@@ -583,6 +632,7 @@ Most demo tutorials split documents into 500-token chunks and do simple cosine s
       category: "Observability",
       readTime: "5 min read",
       date: "Jul 2026",
+      mediumUrl: "https://medium.com/@rucchikabhatia",
       excerpt: "How we slashed 74% of redundant alert noise by applying unsupervised machine learning and topological graph correlation on Prometheus telemetry.",
       content: `## The Problem with Static Alert Thresholds
 When an upstream database experiences high latency, 40 downstream microservices fire "504 Gateway Timeout" alerts simultaneously. Engineers are flooded with 40 PagerDuty notifications for a single root issue.

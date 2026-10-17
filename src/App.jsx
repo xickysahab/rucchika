@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import Snapshot from './components/Snapshot';
 import Expertise from './components/Expertise';
 import TechStack from './components/TechStack';
+import Certifications from './components/Certifications';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Blog from './components/Blog';
@@ -48,6 +49,7 @@ export default function App() {
           <Expertise />
           <Projects />
           <TechStack />
+          <Certifications />
           <Experience />
           <Blog />
           <HobbiesAndCommunity />

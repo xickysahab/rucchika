@@ -24,7 +24,7 @@ export default function TechStack() {
   ];
 
   const filterOptions = [
-    { label: 'All Stack', value: 'All' },
+    { label: 'All Tech Stack', value: 'All' },
     { label: 'Professional Experience (Production)', value: 'Professional Experience' },
     { label: 'Hands-on Projects', value: 'Hands-on Projects' },
     { label: 'Currently Exploring', value: 'Currently Exploring' }
@@ -73,10 +73,10 @@ export default function TechStack() {
     <section className="section" id="stack" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-light)' }}>
       <div className="container">
         <div className="section-header">
-          <Eyebrow>Technology Ecosystem</Eyebrow>
+          <Eyebrow>Tech Stack & Ecosystem</Eyebrow>
           <RevealText
             as="h2"
-            lines={["Tools, Frameworks &", "Infrastructure Matrix"]}
+            lines={["Tech Stack, Tools &", "Infrastructure Matrix"]}
             className="section-title"
           />
           <p className="section-desc">

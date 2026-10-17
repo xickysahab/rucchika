@@ -1,7 +1,7 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { 
-  GraduationCap, Users, Compass, Utensils, Sparkles, Heart 
+  GraduationCap, Users, Compass, Utensils, Sparkles, Heart, Briefcase 
 } from 'lucide-react';
 import Eyebrow from '../common/eyebrow';
 import RevealText from '../common/reveal_text';
@@ -15,6 +15,7 @@ export default function HobbiesAndCommunity() {
     switch (iconName) {
       case 'GraduationCap': return <GraduationCap size={22} color="var(--green-primary)" />;
       case 'Users': return <Users size={22} color="var(--green-primary)" />;
+      case 'Briefcase': return <Briefcase size={22} color="var(--green-primary)" />;
       case 'Compass': return <Compass size={22} color="var(--green-primary)" />;
       default: return <Sparkles size={22} color="var(--green-primary)" />;
     }
@@ -25,14 +26,14 @@ export default function HobbiesAndCommunity() {
       <div className="container">
         {/* Section 1: Extra-Curriculars & Community Leadership */}
         <div className="section-header">
-          <Eyebrow>Community & Ecosystem Impact</Eyebrow>
+          <Eyebrow>Community, Teaching & Consulting</Eyebrow>
           <RevealText
             as="h2"
-            lines={["Teaching, Mentoring &", "Career Advancement"]}
+            lines={["Teaching, Mentoring &", "Platform Consulting"]}
             className="section-title"
           />
           <p className="section-desc">
-            Passionate about uplifting the technical ecosystem through hands-on education, mentorship, and career counseling for aspiring cloud & platform engineers.
+            Passionate about uplifting the technical ecosystem through hands-on education, 1:1 engineering mentorship, and contractual DevOps & AI platform consulting.
           </p>
         </div>
 
@@ -69,7 +70,7 @@ export default function HobbiesAndCommunity() {
           <div className="personal-banner-img-wrap">
             <img 
               src={personal.banner} 
-              alt="DevOps + Data & AI Engineer" 
+              alt="AI Platform Engineer" 
               className="personal-banner-img"
             />
           </div>
@@ -78,7 +79,7 @@ export default function HobbiesAndCommunity() {
               // Engineering Philosophy
             </span>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '8px', letterSpacing: '-0.02em' }}>
-              Where Infrastructure Automation Meets Intelligent AI
+              AI Platform Engineer: Where Cloud Automation Meets Intelligent AI
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: 1.6 }}>
               "Engineering isn't solely about running machines; it's about architecting self-healing ecosystems, empowering engineering squads, and cultivating a growth mindset across the tech community."
@@ -92,11 +93,11 @@ export default function HobbiesAndCommunity() {
             <Eyebrow>Life Beyond Engineering</Eyebrow>
             <RevealText
               as="h2"
-              lines={["Passions, Adventures &", "Lifelong Hobbies"]}
+              lines={["Passions, Mindfulness &", "Lifelong Hobbies"]}
               className="section-title"
             />
             <p className="section-desc">
-              From climbing mountain trails and immersing in literature to discovering wilderness thrills and culinary creativity.
+              From culinary artistry and mindful meditation to systems engineering literature and outdoor exploration.
             </p>
           </div>
 
