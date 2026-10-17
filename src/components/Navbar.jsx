@@ -29,14 +29,22 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
         <div className="navbar-inner">
           <a href="#" className="brand-logo" id="nav-brand-logo" onClick={() => setMobileOpen(false)}>
             <div className="brand-icon">RB</div>
-            <div className="brand-info">
-              <span className="brand-name">
+            <div>
+              <span style={{ fontSize: '0.9375rem', fontWeight: 800, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
                 Rucchika Bhatia
               </span>
-              <div className="brand-subtitle">
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '5px',
+                fontSize: '0.625rem',
+                color: 'var(--text-muted)',
+                fontWeight: 500,
+                letterSpacing: '-0.01em',
+                whiteSpace: 'nowrap'
+              }}>
                 <span className="brand-status-dot"></span>
-                <span className="brand-role-desktop">Lead Cloud, Data, DevOps & AI Platform Engineer</span>
-                <span className="brand-role-mobile">AI Platform Engineer</span>
+                <span>Cloud & AI Platform Lead</span>
               </div>
             </div>
           </a>
@@ -54,9 +62,9 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
 
           <div className="nav-actions">
             <Magnetic strength={0.3}>
-              <button 
-                className="btn-icon" 
-                onClick={toggleTheme} 
+              <button
+                className="btn-icon"
+                onClick={toggleTheme}
                 title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                 id="theme-toggle-btn"
                 aria-label="Toggle Theme"
@@ -67,8 +75,8 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
             </Magnetic>
 
             <Magnetic strength={0.25}>
-              <button 
-                className="btn btn-primary nav-resume-desktop" 
+              <button
+                className="btn btn-primary nav-resume-desktop"
                 onClick={onOpenResume}
                 id="nav-resume-btn"
                 style={{ padding: '8px 20px', fontSize: '0.8125rem' }}
@@ -95,9 +103,9 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
           <div className="mobile-nav-menu">
             <div className="mobile-nav-links">
               {navItems.map((item) => (
-                <a 
-                  key={item.href} 
-                  href={item.href} 
+                <a
+                  key={item.href}
+                  href={item.href}
                   className="mobile-nav-link"
                   onClick={() => setMobileOpen(false)}
                 >
@@ -107,10 +115,10 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
                 </a>
               ))}
             </div>
-            
+
             <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border-light)' }}>
-              <button 
-                className="btn btn-primary" 
+              <button
+                className="btn btn-primary"
                 onClick={() => { setMobileOpen(false); onOpenResume(); }}
                 style={{ width: '100%', justifyContent: 'center' }}
               >
