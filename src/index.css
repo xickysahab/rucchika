@@ -2199,7 +2199,7 @@ img { display: block; max-width: 100%; }
   .hero-headline { font-size: 2.5rem; }
   .hero-grid-layout { grid-template-columns: 1fr; gap: 36px; margin-bottom: 40px; }
   .hero-profile-card { max-width: 380px; margin: 0 auto; }
-  .community-grid { grid-template-columns: 1fr; }
+  .community-grid { grid-template-columns: repeat(2, 1fr); }
   .personal-banner-container { grid-template-columns: 1fr; }
   .hobbies-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }

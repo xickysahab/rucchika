@@ -30,9 +30,48 @@ export const portfolioData = {
       { name: "Adventure", desc: "Exploring untamed wildlife, natural sanctuaries, and thrill sports across diverse destinations.", image: "/images/adventure.jpg", tag: "Exploration" }
     ],
     extraCurricular: [
-      { title: "Teaching", role: "Technical Educator", desc: "Conducting hands-on workshops on Linux fundamentals, Docker containerization, Kubernetes, and multi-cloud architecture.", icon: "GraduationCap" },
-      { title: "Mentoring", role: "Engineering Mentor", desc: "Guiding aspiring cloud engineers, junior DevOps practitioners, and platform leads with actionable 1:1 career roadmaps.", icon: "Users" },
-      { title: "DevOps & AI Platform Consulting", role: "Contractual Consultant", desc: "Available for contractual advisory and platform architecture: multi-cloud infrastructure automation, Kubernetes production hardening, and GenAI/MLOps platform delivery.", icon: "Briefcase" }
+      {
+        tag: "TECHNICAL CONSULTANT",
+        role: "TECHNICAL CONSULTANT",
+        title: "Consulting & Advisory",
+        desc: "Providing technical guidance on cloud architecture, DevOps practices, automation, platform engineering, and infrastructure solutions.",
+        icon: "Briefcase"
+      },
+      {
+        tag: "TECHNICAL INITIATIVES",
+        role: "TECHNICAL INITIATIVES",
+        title: "Projects & Automation",
+        desc: "Building hands-on projects, reusable scripts, CI/CD workflows, cloud labs, and infrastructure-as-code solutions.",
+        icon: "Code2"
+      },
+      {
+        tag: "KNOWLEDGE SHARING",
+        role: "KNOWLEDGE SHARING",
+        title: "Technical Education",
+        desc: "Sharing technical learnings, practical tutorials, cloud engineering concepts, and DevOps best practices with the community.",
+        icon: "GraduationCap"
+      },
+      {
+        tag: "ENGINEERING COMMUNITY",
+        role: "ENGINEERING COMMUNITY",
+        title: "Mentoring & Collaboration",
+        desc: "Helping aspiring engineers understand real-world engineering workflows, troubleshoot challenges, and grow their technical skills.",
+        icon: "Users"
+      },
+      {
+        tag: "CONTINUOUS LEARNING",
+        role: "CONTINUOUS LEARNING",
+        title: "Research & Experimentation",
+        desc: "Exploring emerging tools and technologies across AI, MLOps, AIOps, cloud-native systems, and distributed platforms.",
+        icon: "BookOpen"
+      },
+      {
+        tag: "PERSONAL BRAND",
+        role: "PERSONAL BRAND",
+        title: "Technical Writing",
+        desc: "Documenting solutions, publishing engineering insights, maintaining technical notes, and creating resources for other professionals.",
+        icon: "PenTool"
+      }
     ],
     stats: [
       { label: "Experience", value: "8+ Years", desc: "Multi-Cloud & AI Platforms" },

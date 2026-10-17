@@ -1,7 +1,7 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { 
-  GraduationCap, Users, Compass, Utensils, Sparkles, Heart, Briefcase 
+  GraduationCap, Users, Compass, Utensils, Sparkles, Heart, Briefcase, Code2, BookOpen, PenTool 
 } from 'lucide-react';
 import Eyebrow from '../common/eyebrow';
 import RevealText from '../common/reveal_text';
@@ -13,10 +13,12 @@ export default function HobbiesAndCommunity() {
 
   const renderExtraIcon = (iconName) => {
     switch (iconName) {
+      case 'Briefcase': return <Briefcase size={22} color="var(--green-primary)" />;
+      case 'Code2': return <Code2 size={22} color="var(--green-primary)" />;
       case 'GraduationCap': return <GraduationCap size={22} color="var(--green-primary)" />;
       case 'Users': return <Users size={22} color="var(--green-primary)" />;
-      case 'Briefcase': return <Briefcase size={22} color="var(--green-primary)" />;
-      case 'Compass': return <Compass size={22} color="var(--green-primary)" />;
+      case 'BookOpen': return <BookOpen size={22} color="var(--green-primary)" />;
+      case 'PenTool': return <PenTool size={22} color="var(--green-primary)" />;
       default: return <Sparkles size={22} color="var(--green-primary)" />;
     }
   };
@@ -24,16 +26,16 @@ export default function HobbiesAndCommunity() {
   return (
     <section className="section" id="community" style={{ borderTop: '1px solid var(--border-light)' }}>
       <div className="container">
-        {/* Section 1: Extra-Curriculars & Community Leadership */}
+        {/* Section 1: Beyond Day-to-Day Engineering */}
         <div className="section-header">
-          <Eyebrow>Community, Teaching & Consulting</Eyebrow>
+          <Eyebrow>Community & Strategic Impact</Eyebrow>
           <RevealText
             as="h2"
-            lines={["Teaching, Mentoring &", "Platform Consulting"]}
+            lines={["Beyond My Day-to-Day", "Engineering"]}
             className="section-title"
           />
           <p className="section-desc">
-            Passionate about uplifting the technical ecosystem through hands-on education, 1:1 engineering mentorship, and contractual DevOps & AI platform consulting.
+            Consulting, community contribution, technical knowledge sharing, and initiatives that help engineers build better technology.
           </p>
         </div>
 
@@ -44,14 +46,14 @@ export default function HobbiesAndCommunity() {
               className="community-card"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="community-icon-wrapper">
                 {renderExtraIcon(item.icon)}
               </div>
               <div className="community-meta">
-                <span className="community-role-badge">{item.role}</span>
+                <span className="community-role-badge">{item.tag || item.role}</span>
                 <h3 className="community-title">{item.title}</h3>
                 <p className="community-desc">{item.desc}</p>
               </div>
