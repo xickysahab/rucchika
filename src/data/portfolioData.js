@@ -25,10 +25,10 @@ export const portfolioData = {
     resumeUrl: "#",
     hobbies: [
       { name: "Hiking", desc: "Exploring scenic mountain trails and elevation tracks across wilderness summits.", image: "/images/hiking.png?v=3", tag: "Outdoor & Fitness" },
-      { name: "Cooking", desc: "Crafting wholesome culinary creations, experimenting with rich spices, herbs, and vibrant flavor profiles.", image: "/images/cooking.jpg?v=3", tag: "Culinary Art" },
       { name: "Meditation & Mindfulness", desc: "Cultivating stillness, mental clarity, and reflective awareness to fuel sustained focus and high-stakes problem solving.", image: "/images/meditation.jpg?v=3", tag: "Mindfulness & Zen" },
       { name: "Reading", desc: "Deep diving into systems engineering, distributed architecture, and self-evolution literature.", image: "/images/reading.png?v=3", tag: "Continuous Learning" },
-      { name: "Adventure", desc: "Exploring untamed wildlife, natural sanctuaries, and thrill sports across diverse destinations.", image: "/images/adventure.jpg?v=3", tag: "Exploration" }
+      { name: "Adventure", desc: "Exploring untamed wildlife, natural sanctuaries, and thrill sports across diverse destinations.", image: "/images/adventure.jpg?v=3", tag: "Exploration" },
+      { name: "Cooking", desc: "Crafting wholesome culinary creations, experimenting with rich spices, herbs, and vibrant flavor profiles.", image: "/images/cooking.jpg?v=3", tag: "Culinary Art" }
     ],
     extraCurricular: [
       {
