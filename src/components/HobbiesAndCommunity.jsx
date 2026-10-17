@@ -123,7 +123,7 @@ export default function HobbiesAndCommunity() {
                 </div>
                 
                 <div className="hobby-info">
-                  <h3 className="hobby-name" style={{ marginBottom: '8px' }}>{h.name}</h3>
+                  <h3 className="hobby-name">{h.name}</h3>
                   <p className="hobby-desc">{h.desc}</p>
                 </div>
               </motion.div>
