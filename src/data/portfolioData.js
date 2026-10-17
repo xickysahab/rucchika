@@ -24,7 +24,7 @@ export const portfolioData = {
     banner: "/images/ai-platform-engineer-banner.jpg",
     resumeUrl: "#",
     hobbies: [
-      { name: "Cooking", desc: "Crafting wholesome culinary creations, experimenting with rich spices, herbs, and vibrant flavor profiles.", image: "/images/cooking.jpg", tag: "Culinary Art" },
+      { name: "Hiking", desc: "Exploring scenic mountain trails and elevation tracks across wilderness summits.", image: "/images/hiking.png", tag: "Outdoor & Fitness" },
       { name: "Meditation & Mindfulness", desc: "Cultivating stillness, mental clarity, and reflective awareness to fuel sustained focus and high-stakes problem solving.", image: "/images/meditation.jpg", tag: "Mindfulness & Zen" },
       { name: "Reading", desc: "Deep diving into systems engineering, distributed architecture, and self-evolution literature.", image: "/images/reading.png", tag: "Continuous Learning" },
       { name: "Adventure", desc: "Exploring untamed wildlife, natural sanctuaries, and thrill sports across diverse destinations.", image: "/images/adventure.jpg", tag: "Exploration" }

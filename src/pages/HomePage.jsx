@@ -58,7 +58,7 @@ export default function HomePage({ onOpenResume }) {
     {
       to: "/community",
       title: "Community, Consulting & Life",
-      desc: "Contractual consulting, technical teaching, meditation & culinary art.",
+      desc: "Contractual consulting, technical teaching, hiking & mindful meditation.",
       icon: HeartHandshake,
       tag: "Impact"
     },

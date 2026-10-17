@@ -97,7 +97,7 @@ export default function HobbiesAndCommunity() {
               className="section-title"
             />
             <p className="section-desc">
-              From culinary artistry and mindful meditation to systems engineering literature and outdoor exploration.
+              From mountain hiking and mindful meditation to systems engineering literature and outdoor exploration.
             </p>
           </div>
 
