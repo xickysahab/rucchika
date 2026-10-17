@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { portfolioData } from '../data/portfolioData';
+import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from './SocialIcons';
 import Magnetic from '../common/magnetic';
@@ -30,24 +31,24 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-inner">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
             <div className="brand-icon" style={{ width: '32px', height: '32px', fontSize: '0.8125rem' }}>RB</div>
             <div>
               <strong style={{ color: 'var(--text-headline)', display: 'block', fontSize: '0.9375rem', letterSpacing: '-0.02em' }}>{personal.name}</strong>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', letterSpacing: '-0.01em' }}>{personal.targetRole}</span>
             </div>
-          </div>
+          </Link>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px', fontSize: '0.8125rem', color: 'var(--text-secondary)' }} className="footer-nav-links">
-            <a href="#about" className="nav-link">About</a>
-            <a href="#expertise" className="nav-link">Expertise</a>
-            <a href="#projects" className="nav-link">Projects</a>
-            <a href="#stack" className="nav-link">Tech Stack</a>
-            <a href="#certifications" className="nav-link">Certifications</a>
-            <a href="#experience" className="nav-link">Experience</a>
-            <a href="#blog" className="nav-link">Blog</a>
-            <a href="#community" className="nav-link">Community</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            <Link to="/" className="nav-link">Overview</Link>
+            <Link to="/expertise" className="nav-link">Expertise</Link>
+            <Link to="/projects" className="nav-link">Projects</Link>
+            <Link to="/tech-stack" className="nav-link">Tech Stack</Link>
+            <Link to="/certifications" className="nav-link">Certifications</Link>
+            <Link to="/experience" className="nav-link">Experience</Link>
+            <Link to="/blog" className="nav-link">Blog</Link>
+            <Link to="/community" className="nav-link">Community</Link>
+            <Link to="/contact" className="nav-link">Contact</Link>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>

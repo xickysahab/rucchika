@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Sparkles, Layers, GitBranch, ArrowUpRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from './SocialIcons';
@@ -57,10 +58,10 @@ export default function Hero({ onOpenResume }) {
 
             <div className="hero-cta-group">
               <Magnetic strength={0.25} className="hero-cta-item">
-                <a href="#projects" className="btn btn-primary" id="hero-explore-projects-btn">
+                <Link to="/projects" className="btn btn-primary" id="hero-explore-projects-btn">
                   <span>Explore Projects</span>
                   <ArrowRight size={16} />
-                </a>
+                </Link>
               </Magnetic>
 
               <Magnetic strength={0.25} className="hero-cta-item">
@@ -71,9 +72,9 @@ export default function Hero({ onOpenResume }) {
               </Magnetic>
 
               <Magnetic strength={0.25} className="hero-cta-item">
-                <a href="#contact" className="btn btn-secondary" id="hero-contact-btn">
+                <Link to="/contact" className="btn btn-secondary" id="hero-contact-btn">
                   <span>Let's Connect</span>
-                </a>
+                </Link>
               </Magnetic>
             </div>
           </div>

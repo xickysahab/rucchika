@@ -33,9 +33,14 @@ export default function useSmoothScroll() {
       if (!anchor) return;
 
       const id = anchor.getAttribute('href');
-      if (!id || id === '#') return;
+      if (!id || id === '#' || id.startsWith('#/')) return;
 
-      const target = document.querySelector(id);
+      let target;
+      try {
+        target = document.querySelector(id);
+      } catch (e) {
+        return;
+      }
       if (!target) return;
 
       e.preventDefault();

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import { Sun, Moon, FileText, Menu, X, ArrowUpRight } from 'lucide-react';
 import Magnetic from '../common/magnetic';
 
@@ -13,22 +14,22 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
   }, []);
 
   const navItems = [
-    { num: '01', label: 'About', href: '#about' },
-    { num: '02', label: 'Expertise', href: '#expertise' },
-    { num: '03', label: 'Projects', href: '#projects' },
-    { num: '04', label: 'Tech Stack', href: '#stack' },
-    { num: '05', label: 'Certifications', href: '#certifications' },
-    { num: '06', label: 'Experience', href: '#experience' },
-    { num: '07', label: 'Blog', href: '#blog' },
-    { num: '08', label: 'Community', href: '#community' },
-    { num: '09', label: 'Contact', href: '#contact' },
+    { num: '01', label: 'Overview', to: '/' },
+    { num: '02', label: 'Expertise', to: '/expertise' },
+    { num: '03', label: 'Projects', to: '/projects' },
+    { num: '04', label: 'Tech Stack', to: '/tech-stack' },
+    { num: '05', label: 'Certifications', to: '/certifications' },
+    { num: '06', label: 'Experience', to: '/experience' },
+    { num: '07', label: 'Blog', to: '/blog' },
+    { num: '08', label: 'Community', to: '/community' },
+    { num: '09', label: 'Contact', to: '/contact' },
   ];
 
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container">
         <div className="navbar-inner">
-          <a href="#" className="brand-logo" id="nav-brand-logo" onClick={() => setMobileOpen(false)}>
+          <Link to="/" className="brand-logo" id="nav-brand-logo" onClick={() => setMobileOpen(false)}>
             <div className="brand-icon">RB</div>
             <div>
               <span style={{ fontSize: '0.9375rem', fontWeight: 800, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
@@ -48,16 +49,21 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
                 <span>AI Platform Engineer</span>
               </div>
             </div>
-          </a>
+          </Link>
 
           <nav className="nav-links">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="nav-link">
+              <NavLink 
+                key={item.to} 
+                to={item.to} 
+                className={({ isActive }) => `nav-link ${isActive ? 'nav-link--active' : ''}`}
+                end={item.to === '/'}
+              >
                 <span className="nav__swap">
                   <span className="nav__text nav__text--base">{item.label}</span>
                   <span className="nav__text nav__text--alt" aria-hidden="true">{item.label}</span>
                 </span>
-              </a>
+              </NavLink>
             ))}
           </nav>
 
@@ -104,16 +110,17 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
           <div className="mobile-nav-menu">
             <div className="mobile-nav-links">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="mobile-nav-link"
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) => `mobile-nav-link ${isActive ? 'mobile-nav-link--active' : ''}`}
                   onClick={() => setMobileOpen(false)}
+                  end={item.to === '/'}
                 >
                   <span className="mobile-nav-num">{item.num} //</span>
                   <span className="mobile-nav-txt">{item.label}</span>
                   <ArrowUpRight size={18} style={{ marginLeft: 'auto', opacity: 0.5 }} />
-                </a>
+                </NavLink>
               ))}
             </div>
 
