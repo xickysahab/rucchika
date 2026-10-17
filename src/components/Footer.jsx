@@ -100,7 +100,6 @@ export default function Footer() {
             <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--green-primary)' }}>
               ● {time}
             </span>
-            <span>Lenis + Motion Architecture</span>
           </div>
         </div>
       </div>
