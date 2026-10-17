@@ -2068,12 +2068,15 @@ img { display: block; max-width: 100%; }
    HOBBIES
    ══════════════════════════════════ */
 .hobbies-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 .hobby-card {
+  flex: 1 1 310px;
+  max-width: 341px;
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-xl);
@@ -2524,9 +2527,11 @@ img { display: block; max-width: 100%; }
     padding: 22px 16px;
     border-radius: var(--radius-lg);
   }
-  .hobbies-grid { grid-template-columns: 1fr; }
+  .hobbies-grid { width: 100%; }
   .hobby-card {
     border-radius: var(--radius-lg);
+    max-width: 100%;
+    flex: 1 1 100%;
   }
 
   /* Footer Mobile */
